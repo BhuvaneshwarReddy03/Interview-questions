@@ -208,7 +208,7 @@ try (Connection conn = openConnection()) {
 
 ---
 
-## Delivery reminders for tomorrow
+## Delivery reminders
 - Slow down — most stumbles tonight were pacing/repetition, not knowledge gaps.
 - Land answers on a clear closing sentence — don't trail off into a question or repeat the last phrase.
 - Say "thread" deliberately (not "threat"), "intermediate" (not "internet"), watch enum case (OrderStatus.COMPLETED, all-caps).
