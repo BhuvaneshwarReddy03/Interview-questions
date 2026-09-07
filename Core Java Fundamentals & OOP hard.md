@@ -110,3 +110,7 @@ To create a truly immutable class, we first make the class final so no other cla
 ## Why do we need to make fields final?
 Without final, the CPU or JIT compiler can reorder instructions during object creation, potentially publishing the object reference to another thread before its constructor finishes assigning field values.
 The Java Memory Model provides a safe publication guarantee for final fields: it inserts a memory barrier at the end of the constructor, ensuring no thread can ever observe a partially initialized object. All final fields are guaranteed to be fully visible to all threads as soon as the constructor finishes.
+
+## What is the difference between core language features and library features in Java?
+Core language features define the fundamental grammar, reserved keywords, and control structures enforced directly by the Java compiler. These include syntax rules, constructs like class and interface, loops like for and while, and exception handling. You cannot change or invent these without modifying the compiler itself.
+Library features, on the other hand, are reusable classes, data structures, and APIs that are built using those core language features and bundled with the JDK—like List, HashMap, and Math. Instead of reinventing the wheel from scratch, we can simply import and reuse these pre-built components to build our applications faster.
