@@ -24,3 +24,14 @@ Also offers O(1) time complexity with minor overhead for node references.
 Backed by a TreeMap (Red-Black tree).
 Stores elements in sorted order (natural or via a Comparator).
 Operations run in O(log n) time, and it does not allow null values.
+
+## What is the difference between HashMap, LinkedHashMap, and TreeMap?
+The main difference between HashMap, LinkedHashMap, and TreeMap is the underlying data structure they use, the time complexity, and the ordering of elements:
+**HashMap** uses a hash table under the hood, doesn't preserve any insertion order, and has an average time complexity of $O(1)$. It allows one null key.
+**LinkedHashMap** uses a hash table and a doubly-linked list under the hood. It preserves the insertion order, has an average time complexity of $O(1)$, and allows one null key.
+**TreeMap** uses a Red-Black tree under the hood. It stores elements in sorted order with a time complexity of $O(\log n)$, and it doesn't allow null keys.
+TreeMap doesn't allow null elements (since it compares keys), whereas HashMap and LinkedHashMap permit one null
+
+## HashSet vs TreeSet vs LinkedHashSet? How does HashSet work internally?
+The main difference between HashSet, TreeSet, and vs LinkedHashSet is the underlying data structure they use and the insertion order they maintain, I mean the order of the elements they maintain, and the time complexity of operations. Basically, HashSet is backed by HashMap. It doesn't preserve any insertion order and time complexity of operations is O(1). The next thing is TreeSet. It's backed by a TreeMap. It sorts the element in ascending order and the time complexity of operations is O(log n). Coming to LinkedHashSet, it is backed by LinkedHashMap. It preserves the insertion order and the time complexity, operation time complexity is O(1). And coming to how HashSet works internally is basically it just under the hood uses HashMap object. It stores whatever we are adding to set, it stores them as keys and for values, it just uses some dummy object to store that as value. That's how it works under the hood.
+TreeSet doesn't allow null elements (since it compares keys), whereas HashSet and LinkedHashSet permit one null
